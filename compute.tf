@@ -4,9 +4,10 @@ resource "google_compute_instance" "default" {
   machine_type = "${var.size}"
   zone         = "${var.zone}"
   tags = [
-    "${var.env}",
     "${var.component}",
-    "id-${var.instance_id}",
+    "${var.env}",
+    "${var.env}-${var.component}",
+    "id-${var.instance_id}"
     ]
   boot_disk{
     initialize_params {
