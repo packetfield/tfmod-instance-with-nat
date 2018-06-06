@@ -1,9 +1,10 @@
 
 resource "google_compute_instance" "default" {
-  name         = "${var.env}-${var.component}-${var.instance_id}"
-  machine_type = "${var.size}"
-  zone         = "${var.zone}"
-  tags = [
+  allow_stopping_for_update = "${var.allow_stopping_for_update}"
+  name                      = "${var.env}-${var.component}-${var.instance_id}"
+  machine_type              = "${var.size}"
+  zone                      = "${var.zone}"
+  tags                      = [
     "${var.component}",
     "${var.env}",
     "${var.env}-${var.component}",
@@ -11,8 +12,8 @@ resource "google_compute_instance" "default" {
     ]
   boot_disk{
     initialize_params {
-      size  = 10
-      image = "${var.image}"
+      size                  = 10
+      image                 = "${var.image}"
     }
   }
 

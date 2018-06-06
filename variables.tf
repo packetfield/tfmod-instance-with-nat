@@ -1,3 +1,4 @@
+variable allow_stopping_for_update { default = true }
 variable nat_ip { default = "undefined" }
 variable component { default = "undefined" }
 variable env { default = "testing" }
