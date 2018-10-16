@@ -41,3 +41,5 @@ variable instance_id { default = "999" }
 variable data_disk {
   description = "data volume path, ensure this is created before using this module"
 }
+
+variable boot_disk_size { default = 10 }

@@ -12,7 +12,7 @@ resource "google_compute_instance" "default" {
     ]
   boot_disk{
     initialize_params {
-      size                  = 10
+      size                  = "${var.boot_disk_size}"
       image                 = "${var.image}"
     }
   }
